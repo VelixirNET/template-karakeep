@@ -1,0 +1,7 @@
+node_modules/
+npm-debug.log*
+.env
+# Built by `npm run build` from the pinned upstream release. Never committed.
+karakeep/
+# Karakeep's data when you run start.js on your own machine.
+.karakeep-data/

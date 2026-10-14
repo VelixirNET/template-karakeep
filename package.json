@@ -1,0 +1,21 @@
+{
+  "name": "velixir-karakeep",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Karakeep, ready to deploy on velixir.",
+  "karakeep": {
+    "version": "0.33.2",
+    "meilisearch": {
+      "version": "1.41.0",
+      "sha256": "7c94284f47dcbcb2950f5dcb154c396be7157e16d4f4dd600109f3587247dded"
+    }
+  },
+  "scripts": {
+    "build": "node build-karakeep.js",
+    "start": "node start.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}

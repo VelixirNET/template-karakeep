@@ -1,0 +1,13 @@
+{
+  "name": "Karakeep",
+  "tagline": "Save links, notes and images in one place and find them again in seconds, with full-text search, optional AI tagging, and apps for your phone and browser.",
+  "description": "Karakeep (formerly Hoarder) is a bookmark-everything app you host yourself. Save a link and it fetches the title, description, image and readable text of the page, so you can search everything you have ever saved, not just titles. Keep notes and images alongside, organise them into lists and tags, highlight passages, and subscribe to RSS feeds. Add an OpenAI-compatible key and it tags and summarises new bookmarks for you. The browser extensions and iOS and Android apps connect to your own address. Deploying it adds a persistent volume, so bookmarks, saved pages and the search index survive restarts and redeploys, with daily snapshots you can restore from the app's Volume tab. Nobody else can claim it: the first start creates the admin account and prints the password once to the deploy log, and sign-ups stay closed until you open them. Pages are read without a browser, so screenshots and JavaScript-only pages are not captured.",
+  "language": "Node",
+  "runtimeVersion": "22",
+  "accent": "#7C3AED",
+  "tags": ["Bookmarks", "Search", "Volume"],
+  "topics": ["karakeep", "bookmarks", "read-it-later", "self-hosted", "meilisearch", "nodejs"],
+  "minMemoryMb": 1024,
+  "alwaysOn": true,
+  "volume": { "mountPath": "/data", "limitGb": 10 }
+}

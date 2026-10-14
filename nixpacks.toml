@@ -1,0 +1,18 @@
+# Build settings for velixir's builder (Nixpacks).
+#
+# Nixpacks detects Node from package.json, installs with npm ci and runs `npm run build`
+# (build-karakeep.js, which builds the pinned Karakeep release and fetches Meilisearch).
+#
+# Node 22 rather than 24 on purpose: Karakeep's SQLite driver ships ready-built binaries for
+# Node 22, while on Node 24 it would have to be compiled, which needs a compiler toolchain in the
+# image. Listing the packages replaces what the builder would detect rather than adding to it:
+# there is no browser in this image (see the README).
+[phases.setup]
+nixPkgs = ["nodejs_22"]
+aptPkgs = []
+
+# Straight to node rather than `npm run start`: npm and a shell in between do not pass SIGTERM
+# on. start.js runs Karakeep's web app, its workers and Meilisearch, and forwards the signal to
+# all three.
+[start]
+cmd = "node start.js"
