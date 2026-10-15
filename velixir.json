@@ -8,6 +8,6 @@
   "tags": ["Bookmarks", "Search", "Volume"],
   "topics": ["karakeep", "bookmarks", "read-it-later", "self-hosted", "meilisearch", "nodejs"],
   "minMemoryMb": 1024,
-  "alwaysOn": true,
+  "requiresVolume": true,
   "volume": { "mountPath": "/data", "limitGb": 10 }
 }
